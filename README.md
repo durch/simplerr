@@ -1,5 +1,5 @@
 # simplerr
-Simple errors in Rust, WIP
+Simple errors in Rust
 
 ## Usage 
 
