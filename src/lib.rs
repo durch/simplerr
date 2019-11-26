@@ -16,8 +16,8 @@ macro_rules! err {
             }
         }
 
-        impl fmt::Display for $i {
-            fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        impl core::fmt::Display for $i {
+            fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
                 match self.description.as_ref() {
                     Some(err) => write!(f, "{}", err),
                     None => write!(f, "An unknown error has occurred!"),
