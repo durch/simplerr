@@ -6,12 +6,14 @@ macro_rules! err {
         #[derive(Debug)]
         pub struct $i {
             pub description: Option<String>,
+            pub data: Option<String>
         }
 
         impl From<&str> for $i {
             fn from(str: &str) -> Self {
                 $i {
                     description: Some(str.to_string()),
+                    data: None
                 }
             }
         }
@@ -32,6 +34,7 @@ macro_rules! err {
                     fn from(e: $t) -> $i {
                         $i {
                             description: Some(String::from(format!("{}", e))),
+                            data: None
                         }
                     }
                 }
