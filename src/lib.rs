@@ -9,7 +9,9 @@ macro_rules! err {
             pub data: Option<String>
         }
 
-        impl From<&str> for $i {
+        impl std::error::Error for $i {}
+
+        impl std::convert::From<&str> for $i {
             fn from(str: &str) -> Self {
                 $i {
                     description: Some(str.to_string()),
@@ -30,7 +32,7 @@ macro_rules! err {
 
         macro_rules! from {
             ($t: ty) => {
-                impl From<$t> for $i {
+                impl std::convert::From<$t> for $i {
                     fn from(e: $t) -> $i {
                         $i {
                             description: Some(String::from(format!("{}", e))),
