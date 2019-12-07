@@ -5,9 +5,9 @@
 /// use std::fs;
 /// use simpl::err;
 ///
-/// err!(ExampleError
+/// err!(ExampleError,
 ///     {
-///         Io[std::io::Error]
+///         Io@std::io::Error;
 ///     });
 ///
 /// fn main() -> Result<()> {
@@ -18,7 +18,7 @@
 /// ```
 #[macro_export]
 macro_rules! err {
-    ($i: ident {$($j: ident[$t: ty])*}) => {
+    ($i: ident, {$($j: ident@$t: ty;)*}) => {
         #[derive(Debug)]
         enum Errs {
             $( $j($t)),*
@@ -91,9 +91,9 @@ macro_rules! err {
 #[cfg(test)]
 mod tests {
     use std::fs;
-    super::err!(TestError 
+    super::err!(TestError,
         {
-            Io[std::io::Error]
+            Io@std::io::Error;
         }
     );
 
