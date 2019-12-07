@@ -1,6 +1,8 @@
 # simplerr
 Simple errors in Rust
 
+**This is a very early version and anything, including matching syntax can change with little or no warning** 
+
 ## Usage 
 
 ```toml
