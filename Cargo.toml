@@ -3,7 +3,7 @@ name = "simpl"
 version = "0.1.0-alpha.1"
 authors = ["Drazen Urch <drazen@urch.eu>"]
 edition = "2018"
-licence = "MIT"
+license = "MIT"
 description = "No dependency error handling, and own error construction and conversin lib"
 repository = "https://github.com/durch/simplerr"
 
