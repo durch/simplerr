@@ -12,15 +12,16 @@ simpl = {git = "https://github.com/durch/simplerr"}
 
 ```rust
 use std::fs;
-
 use simpl::err;
 
-err!(ExampleError);
-from!(std::io::Error);
+err!(ExampleError,
+    {
+        Io@std::io::Error;
+    });
 
 fn main() -> Result<()> {
-  fs::create_dir("test")?;
-  Ok(())
+    fs::create_dir("test")?;
+    fs::remove_dir_all("test")?;
+    Ok(())
 }
-
 ```
