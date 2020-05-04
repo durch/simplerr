@@ -6,7 +6,7 @@ Zero dependency error handling.
 
 ```toml
 [dependancies]
-simpl = 0.1.0
+simpl = "0.1.0"
 ```
 
 ```rust
