@@ -1,13 +1,12 @@
 # simplerr
-Simple errors in Rust
 
-**This is a very early version and anything, including matching syntax can change with little or no warning** 
+Zero dependency error handling.
 
 ## Usage 
 
 ```toml
 [dependancies]
-simpl = {git = "https://github.com/durch/simplerr"}
+simpl = 0.1.0
 ```
 
 ```rust

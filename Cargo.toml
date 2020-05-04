@@ -1,10 +1,10 @@
 [package]
 name = "simpl"
-version = "0.1.0-alpha.1"
+version = "0.1.0"
 authors = ["Drazen Urch <drazen@urch.eu>"]
 edition = "2018"
 license = "MIT"
-description = "No dependency error handling, and own error construction and conversin lib"
+description = "No dependency error handling, and own error construction and conversion lib"
 repository = "https://github.com/durch/simplerr"
 
 [dependencies]
