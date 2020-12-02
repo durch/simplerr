@@ -73,6 +73,8 @@ macro_rules! err {
             }
         }
         pub type Result<T, E = $i> = std::result::Result<T, E>;
+        impl !Send for $i {}
+        impl !Sync for $i {}
 
         $(
             impl std::convert::From<$t> for $i {
