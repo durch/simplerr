@@ -46,7 +46,7 @@ macro_rules! err {
         }
 
         impl std::error::Error for $i {
-            fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+            fn source(&self) -> Option<&(dyn std::error::Error +'static + Send + Sync)> {
                 match self.source {
                     Some(ref source) => Some(source),
                     None => None
